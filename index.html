@@ -5,12 +5,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stefan Lacher</title>
+    <title>Personal Portfolio Website - Stefan Lacher</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bf11014afb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    This is the webside of Stefan Lacher
 
+
+    <!-- -------------home------------  -->
+    <div id="header">
+        <div class="container">
+            <nav id="top-menu">
+                <img src="images/fifth_version.png" alt="logo" class="logo2">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header-text">
+                <p>Data Engineer | Data Scientist</p>
+                <h1>Hi, <br> I'm <span> Stefan </span> Lacher<span>.</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------info------------  -->
+    <div id="header">
+        <div class="container">
+            <div class="header-text">
+                <p>This page is currently under construction.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------contact------------  -->
+    <div id="contact">
+        <div class="copyright">
+            <p>© 2022 | <span> Stefan </span> Lacher<span>.</span></p>
+        </div>
+    </div>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function () { myFunction() };
+
+        // Get the navbar
+        var navbar = document.getElementById("top-menu");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
 </body>
 
 </html>
